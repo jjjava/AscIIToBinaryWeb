@@ -20,7 +20,7 @@
         </ul> 
         <form action="dotext2bin.jsp" method="POST" target="_self" accept-charset="UTF-8" autocomplete="on">
             Text:<br>
-            <input id="texto" type="text" name="texto" >
+            <input id="texto" type="text" name="texto" size="100" autofocus="on" >
             <br>
             <input type="submit" value="Submit">
         </form>

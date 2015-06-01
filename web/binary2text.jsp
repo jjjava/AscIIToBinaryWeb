@@ -20,7 +20,7 @@
         </ul> 
         <form action="dobin2text.jsp" method="POST" target="_self" accept-charset="UTF-8" autocomplete="on">
             Bianry:<br>
-            <input id="bin" type="text" name="bin" >
+            <input id="bin" type="text" name="bin" size="100" autofocus="on" >
             <br>
             <input type="submit" value="Submit">
         </form>
