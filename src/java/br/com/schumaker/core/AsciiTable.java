@@ -13,7 +13,7 @@ public class AsciiTable {
     private Map asciiCode;
 
     private AsciiTable() {
-        asciiCode = new HashMap<>();
+        asciiCode = new HashMap<String,Integer>();
         asciiCode.put(" ", 32);
         asciiCode.put("A", 65);
         asciiCode.put("B", 66);
@@ -104,7 +104,7 @@ public class AsciiTable {
 
     public int getAsciiCode(String letter) {
         if (asciiCode.containsKey(letter)) {
-            return (int) asciiCode.get(letter);
+            return (Integer) asciiCode.get(letter);
         } else {
             return 32;
         }
@@ -112,7 +112,7 @@ public class AsciiTable {
 
     public String getChar(int code) {
         for (Object key : asciiCode.keySet()) {
-            int value = (int) asciiCode.get(key);
+            int value = (Integer) asciiCode.get(key);
             if (value == code) {
                 return (String) key;
             }
