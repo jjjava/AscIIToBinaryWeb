@@ -11,25 +11,40 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Hs - Text to Binary</title>
+        <title>Hs - Binary Web</title>
+        <link rel="stylesheet" href="images/style.css" type="text/css" />
     </head>
     <body>
-        <h2>Hs - BinaryWeb</h2>
-        <br>
-        <ul id="menu">
-            <li><a href="text2binary.jsp" >Text to Binary </a></li>
-            <li><a href="binary2text.jsp" >Binary to Text</a></li>
-        </ul>
-        <br>
-        Text:
-        <br>
-        <%
-            String text = request.getParameter("texto");
-            char textChar[] = text.toCharArray();
-            for (char c : textChar) {
-                String s = "" + c;
-                out.print(Translation.asciiToBinaryString(AsciiTable.getInstance().getAsciiCode(s)) + " ");
-            }
-        %>
+        <div class="content">
+            <div class="preheader">
+            </div>
+            <div class="header">
+                <div class="title">HStudio</div>
+                <div class="slogan">Future is Near...</div>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li id="current"><a href="text2binary.jsp">Text to Binary</a></li>
+                    <li><a href="binary2text.jsp">Binary to Text</a></li>
+                </ul>
+            </div>
+            <div class="main_content">
+                <div class="sd_left">
+                    <div class="text_padding">
+                        <%
+                            String text = request.getParameter("texto");
+                            char textChar[] = text.toCharArray();
+                            for (char c : textChar) {
+                                String s = "" + c;
+                                out.print(Translation.asciiToBinaryString(AsciiTable.getInstance().getAsciiCode(s)) + " ");
+                            }
+                        %>
+                    </div>
+                </div>
+                <div class="footer">
+                </div>
+            </div>
+        </div>
     </body>
 </html>

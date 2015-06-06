@@ -98,8 +98,10 @@ public class AsciiTable {
         asciiCode.put("=", 61);
         asciiCode.put(">", 62);
         asciiCode.put("?", 63);
-        asciiCode.put("@", 64); 
-                
+        asciiCode.put("Ç", 128);
+        asciiCode.put("ç", 135);
+        asciiCode.put("ü", 129);
+        asciiCode.put("é", 130);
     }
 
     public int getAsciiCode(String letter) {
